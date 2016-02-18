@@ -5,5 +5,6 @@ angular
 AdminContributionController.$inject = [];
 
 function AdminContributionController(){ 
-    
+
 }
+
