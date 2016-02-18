@@ -19,11 +19,25 @@ function AdminLocationController($http){
             startPos = position;
             vm.lat = startPos.coords.latitude;
             vm.lng = startPos.coords.longitude;
+            var latlng = new google.maps.LatLng(vm.lat,vm.lng)
             map.setZoom(16); 
-            map.setCenter(new google.maps.LatLng(vm.lat,vm.lng));
+            map.setCenter(latlng);
+            
+            //////// changing icon
+            new google.maps.Marker({
+                position: new google.maps.LatLng(vm.lat,vm.lng),
+                icon: {
+                    path: google.maps.SymbolPath.CIRCLE,
+                    scale: 7
+                },
+                draggable: true,
+                map: map
+            });
+            ///////// get distance
+            var pointA = new google.maps.LatLng(5.3335738, 100.4810813);
+            console.log(google.maps.geometry.spherical.computeDistanceBetween(latlng, pointA)/1000);
         };
         navigator.geolocation.getCurrentPosition(geoSuccess);
-        
         google.maps.event.addListener(map, 'click', function(event) {
             placeMarker(event.latLng);
         });
