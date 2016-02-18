@@ -1,0 +1,12 @@
+.admin {
+    padding-left: 240px;
+}
+
+.admin_side_nav{
+    margin-top:0px;
+}
+
+.scrollit{
+    overflow-y:scroll;
+    height:600px;
+}
