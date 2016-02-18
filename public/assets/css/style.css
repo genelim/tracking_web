@@ -1,9 +1,18 @@
-.admin {
-    padding-left: 240px;
+
+/****
+*****	Admin Dashboard
+****/
+
+.admin{
+  	padding-left: 240px;
 }
 
 .admin_side_nav{
-    margin-top:0px;
+	margin-top:0px;
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 }
 
 .scrollit{
