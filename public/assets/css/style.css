@@ -9,3 +9,8 @@
 .admin_side_nav{
 	margin-top:0px;
 }
+
+.scrollit{
+    overflow-y:scroll;
+    height:600px;
+}
