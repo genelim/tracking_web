@@ -61,7 +61,6 @@ function AdminLocationController($http){
             .then(
             function(callback){
                 // success callback
-                console.log(callback);
                 for(var i = 0; i < callback.data.response.length; i++){
                     var LatLng = {  
                                     lat: callback.data.response[i].latitude, 
