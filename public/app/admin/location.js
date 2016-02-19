@@ -72,7 +72,7 @@ function AdminLocationController($http){
                         title: callback.data.response[i].name
                     });
                     
-                    createInfoWindow(marker, callback.data.response[i].name);
+                    createInfoWindow(marker, callback.data.response[i].name+ ' : '+callback.data.response[i].points)+'P';
                 }
                 var infoWindow = new google.maps.InfoWindow();
                 function createInfoWindow(marker, popupContent) {
